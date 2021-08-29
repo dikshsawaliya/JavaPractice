@@ -1,3 +1,4 @@
+import javax.xml.transform.Result;
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -46,14 +47,3 @@ class fizz {
 
 }
 
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
-
-        Result.fizzBuzz(n);
-
-        bufferedReader.close();
-    }
-}

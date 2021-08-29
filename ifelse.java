@@ -13,6 +13,9 @@ public class ifelse {
     private static  Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+        System.out.println("Enter a number");
+
         int N = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         

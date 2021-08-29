@@ -14,6 +14,7 @@ public static void main(String[]args)
 
     System.out.println("Enter th elements: ");
 
+    int i;
     for(i=0; i<N; i++)
     {
         arr[i] = scanner.nextInt();
