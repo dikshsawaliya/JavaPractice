@@ -1,13 +1,14 @@
 class node {
 
-    int distance = 0;
 
+    int distance = 0;
     boolean accessed = false;
 }
 
-public class diskSSTF {
+public class disk_Scheduling_SSTF {
 
-    public static void calculateDifference(int queue[],
+
+    public static void calcDiff(int queue[],
                                            int head, node diff[])
 
     {
@@ -15,7 +16,8 @@ public class diskSSTF {
             diff[i].distance = Math.abs(queue[i] - head);
     }
 
-    public static int findMin(node diff[])
+
+    public static int findingMinimum(node diff[])
     {
         int index = -1, minimum = Integer.MAX_VALUE;
 
@@ -29,7 +31,7 @@ public class diskSSTF {
         return index;
     }
 
-    public static void shortestSeekTimeFirst(int request[],
+    public static void sstf(int request[],
                                              int head)
 
     {
@@ -49,9 +51,9 @@ public class diskSSTF {
         for (int i = 0; i < request.length; i++) {
 
             seek_sequence[i] = head;
-            calculateDifference(request, head, diff);
+            calcDiff(request, head, diff);
 
-            int index = findMin(diff);
+            int index = findingMinimum(diff);
 
             diff[index].accessed = true;
 
@@ -62,10 +64,10 @@ public class diskSSTF {
 
         seek_sequence[seek_sequence.length - 1] = head;
 
-        System.out.println("Total number of seek operations = "
+        System.out.println("Total Seek Operations : "
                 + seek_count);
 
-        System.out.println("Seek Sequence is");
+        System.out.println("Your Seek Sequence Will be : ");
 
         for (int i = 0; i < seek_sequence.length; i++)
             System.out.println(seek_sequence[i]);
@@ -73,7 +75,7 @@ public class diskSSTF {
 
     public static void main(String[] args)
     {
-        int arr[] = { 170, 80, 44, 66, 82, 15, 36, 144 };
-        shortestSeekTimeFirst(arr, 50);
+        int arr[] = { 82,170,43,140,24,16,190 };
+        sstf(arr, 50);
     }
 }
