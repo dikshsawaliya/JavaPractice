@@ -1,39 +1,14 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 public class practice_canvas {
+    public static void  main(String args[]) {
+        int arr[][][] = {{{1,2,3,3,3},{4,5,6,3,3},{2,3,4,3,3}}};
+        for (int i =0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                for (int k=0; k< arr.length; k++ ) {
+                    System.out.print(arr[i][j][k] + " ");
+                }
+                }
+            System.out.println();
 
-    //Write your code here
-    static Scanner input = new Scanner(System.in);
-    static boolean flag = true;
-    static int B = input.nextInt();
-    static int H = input.nextInt();
-
-    static {
-        try {
-            if (B <= 0 || H <= 0) {
-                flag = false;
-                throw new Exception("Breadth and Height must be positive");
-            }
         }
-            catch (Exception e)
-            {
-                System.out.println(e);
-            }
-        }
-
-
-
-    public static void main(String[] args){
-        if(flag){
-            int area=B*H;
-            System.out.print(area);
-        }
-
-    }//end of main
-
-}//end of class
-
+    }
+}
